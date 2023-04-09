@@ -12,26 +12,28 @@ class CountryServiceImpl(
 ) : CountryService {
 
     override fun getAll(): List<CountryDto> {
-        return countryRepository.findAll().map { it.toDto()
+        return countryRepository.findAll().map {// it.toDto()
 
-//            CountryDto(
-//                id = it.id,
-//                population = it.population,
-//                name = it.name,
-//
-//
-//
-//            )
+            CountryDto(
+                id = it.id,
+                population = it.population,
+                name = it.name,
+
+
+                )
+
         }
+        
 
 
     }
-    private  fun CountryEntity.toDto(): CountryDto =
-
-        CountryDto(
-            id = this.id,
-            population = this.population,
-            name = this.name,
-            )
-    }
+}
+//    private  fun CountryEntity.toDto(): CountryDto =
+//
+//        CountryDto(
+//            id = this.id,
+//            population = this.population,
+//            name = this.name,
+//            )
+//    }
 
