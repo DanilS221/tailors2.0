@@ -15,7 +15,8 @@ class CountryEntity (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int = 0,
     @Column( name ="population")
-    val  population: Int = 0,
-    val  name: String = "",
+    val  population: Int ,
+    @Column( name ="name")
+    val  name: String ,
 
 )

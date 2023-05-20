@@ -12,7 +12,9 @@ class CountryServiceImpl(
 ) : CountryService {
 
     override fun getAll(): List<CountryDto> {
-        return countryRepository.findAll().map {// it.toDto()
+        val findAll = countryRepository.findAll()
+        val map = findAll.map {// it.toDto()
+
 
             CountryDto(
                 id = it.id,
@@ -23,6 +25,7 @@ class CountryServiceImpl(
                 )
 
         }
+        return map
         
 
 
